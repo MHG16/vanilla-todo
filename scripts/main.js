@@ -12,11 +12,21 @@
 //2. Tell a function to run when that event happens
 //3. Create the function   
 
+var arr = [];
 var buttonEl = document.querySelector('.btnSubmit');
 buttonEl.addEventListener('click', textLogger);
 
 function textLogger() {
-	console.log(document.querySelector('.txtinput').value);
+	console.log(document.querySelector('.txtInput').value);
+	//push whatever is in the input box to the array
+	arr.push(document.querySelector('.txtInput').value)
+}
+
+function render() {
+	document.querySelector('txtInput').value = '';
+	for (var i = 0; i < arr.length; i++) {
+		 arr[i].toString;  
+	}
 }
 
 
