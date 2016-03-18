@@ -21,10 +21,10 @@ buttonEl.addEventListener('click', textLogger);
 
 function textLogger() {
 	console.log(document.querySelector('.txtInput').value);
-	document.querySelector('.txtArea').innerHTML = document.querySelector('.txtInput').value;
+	//document.querySelector('.txtArea').innerHTML = document.querySelector('.txtInput').value;
 	//push whatever is in the input box to the array
 	arr.push(document.querySelector('.txtInput').value);
-	console.log(arr);
+	//console.log(arr);
 	render(arr);
 }
 
@@ -40,12 +40,12 @@ function textLogger() {
 function render(arr) {
 	var todoItems = '';
 
-	document.querySelector('.txtArea').value = 'a';
+	document.querySelector('.txtArea').innerHTML = '';
 	for (var i = 0; i < arr.length; i++) {
 	
 	todoItems = todoItems + arr[i].toString();  
 	}
-	document.querySelector('.txtArea').value = todoItems; 
+	document.querySelector('.txtArea').innerHTML = todoItems; 
 }
 
 
