@@ -23,6 +23,7 @@ function textLogger() {
 	console.log(document.querySelector('.txtInput').value);
 	//push whatever is in the input box to the array
 	arr.push(document.querySelector('.txtInput').value);
+	document.querySelector('.txtInput').value = '';
 	render(arr);
 }
 
