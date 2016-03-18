@@ -16,17 +16,35 @@ var arr = [];
 var buttonEl = document.querySelector('.btnSubmit');
 buttonEl.addEventListener('click', textLogger);
 
+//Inputs: None
+//Outputs: 
+
 function textLogger() {
 	console.log(document.querySelector('.txtInput').value);
 	//push whatever is in the input box to the array
 	arr.push(document.querySelector('.txtInput').value)
+	document.querySelector('.txtArea').value = arr.toString();
+	render(arr);
 }
 
-function render() {
-	document.querySelector('txtInput').value = '';
+
+//render clears out all of the html inside of the section 
+//and then iterates over the array and builds up an html string that contains all the todo 
+//items in the array.
+//Then set that newly created string to the contents of the section.  
+
+//Inputs: array
+//Outputs:  
+
+function render(arr) {
+	var todoItems = '';
+
+	document.querySelector('.txtArea').value = 'a';
 	for (var i = 0; i < arr.length; i++) {
-		 arr[i].toString;  
+	
+	todoItems = todoItems + arr[i].toString();  
 	}
+	document.querySelector('.txtArea').value = todoItems; 
 }
 
 
