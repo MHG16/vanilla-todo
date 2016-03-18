@@ -21,9 +21,10 @@ buttonEl.addEventListener('click', textLogger);
 
 function textLogger() {
 	console.log(document.querySelector('.txtInput').value);
+	document.querySelector('.txtArea').innerHTML = document.querySelector('.txtInput').value;
 	//push whatever is in the input box to the array
-	arr.push(document.querySelector('.txtInput').value)
-	document.querySelector('.txtArea').value = arr.toString();
+	arr.push(document.querySelector('.txtInput').value);
+	console.log(arr);
 	render(arr);
 }
 
