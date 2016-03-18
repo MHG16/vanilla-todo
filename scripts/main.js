@@ -43,7 +43,7 @@ function render(arr) {
 	document.querySelector('.txtArea').innerHTML = '';
 	for (var i = 0; i < arr.length; i++) {
 	
-	todoItems = todoItems + arr[i].toString();  
+	todoItems = (todoItems + arr[i].toString() + '<br>');  
 	}
 	document.querySelector('.txtArea').innerHTML = todoItems; 
 }
