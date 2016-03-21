@@ -17,7 +17,7 @@ var buttonEl = document.querySelector('.btnSubmit');
 buttonEl.addEventListener('click', textLogger);
 
 //Inputs: None
-//Outputs: 
+//Outputs: None
 
 function textLogger() {
 	console.log(document.querySelector('.txtInput').value);
@@ -34,7 +34,7 @@ function textLogger() {
 //Then set that newly created string to the contents of the section.  
 
 //Inputs: array
-//Outputs:  
+//Outputs:  None
 
 function render(arr) {
 	var todoItems = '';
